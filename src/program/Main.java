@@ -22,7 +22,7 @@ public class Main {
             FileReader freader= new FileReader(myfile); //created an object of freader class
             CSVReader creader= new CSVReader(freader);  // created creader object by parsing freader as a parameter
             String[] nextRecord;    // created an array of type String
-            nextRecord = creader.readNext();
+            creader.readNext(); // skip the first line with column names
             int i = 0;
             while ((nextRecord = creader.readNext()) != null && i < 100) {
                 Event event = new Event();

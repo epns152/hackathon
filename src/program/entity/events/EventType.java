@@ -18,7 +18,7 @@ public enum EventType {
                 return type;
             }
         }
-        System.out.println("Unknown event type: " + name);
+        System.err.println("Unknown event type: " + name);
         return UNKNOWN;
     }
 }
